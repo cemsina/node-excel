@@ -3,15 +3,6 @@
   "sheet_1": {
     "sheet_name": "Kapak",
     "header": "Ratio Mining",
-    "keys": {
-      "key_1": "rapor",
-      "key_2": "saha",
-      "key_3": "oluşturma_tarihi"
-    },
-    "values": {
-      "value_1": "Filo Raporu",
-      "value_2": "Hekimhan",
-      "value_3": "12/20/2019"
-    }
+    "keys": ["rapor", "saha", "oluşturma_tarihi"]
   }
 }

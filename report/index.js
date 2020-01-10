@@ -1,3 +1,4 @@
 module.exports = {
-    FiloRapor: require('./filo')
-}
+  IhlalRapor: require("./ihlal"),
+  FiloRapor: require("./filo")
+};

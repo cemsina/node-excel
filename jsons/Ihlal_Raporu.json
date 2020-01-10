@@ -1,0 +1,149 @@
+{
+  "name": "İhlal Raporları",
+  "sheets": [
+    {
+      "name": "İhlaller Raporu",
+      "header": "Ratio Mining",
+      "subheaders": ["rapor", "saha", "oluşturma_tarihi"],
+      "values": ["Maden İhlaller Raporu", "Hekimhan", "12/20/2019"]
+    },
+    {
+      "name": "Günlük",
+      "date": "23/01/2018",
+      "tables": [
+        {
+          "name": "Vardiya 1(07:00-17:30)",
+          "headers": [
+            "Sürücüler",
+            "Sürücü Tipi",
+            "Kullandığı Araç",
+            "Hız İhlali",
+            "Bölge İhlali",
+            "Yanlış Dökme",
+            "Motor Zorlama Uyarısı"
+          ],
+          "items": [
+            {
+              "id": 0,
+              "values": [
+                {
+                  "name": "Ali Ahmet"
+                },
+                {
+                  "driver-type": "Kamyon Şöförü"
+                },
+                {
+                  "vehicle-id": "03 KV 730"
+                },
+                {
+                  "speed-violation": "2"
+                },
+                {
+                  "destrict-violation": "1"
+                },
+                {
+                  "wrong-unloading": "1"
+                },
+                {
+                  "engine-overload": "-"
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "values": [
+                {
+                  "name": "Ali Ahmet"
+                },
+                {
+                  "driver-type": "Kamyon Şöförü"
+                },
+                {
+                  "vehicle-id": "03 KV 730"
+                },
+                {
+                  "speed-violation": "2"
+                },
+                {
+                  "destrict-violation": "1"
+                },
+                {
+                  "wrong-unloading": "1"
+                },
+                {
+                  "engine-overload": "-"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vardiya 2 (23:00-07:00)",
+          "headers": [
+            "Sürücüler",
+            "Sürücü Tipi",
+            "Kullandığı Araç",
+            "Hız İhlali",
+            "Bölge İhlali",
+            "Yanlış Dökme",
+            "Motor Zorlama Uyarısı"
+          ],
+          "items": [
+            {
+              "id": 2,
+              "values": [
+                {
+                  "name": "Ali Ahmet"
+                },
+                {
+                  "driver-type": "Kamyon Şöförü"
+                },
+                {
+                  "vehicle-id": "03 KV 730"
+                },
+                {
+                  "speed-violation": "2"
+                },
+                {
+                  "destrict-violation": "1"
+                },
+                {
+                  "wrong-unloading": "1"
+                },
+                {
+                  "engine-overload": "-"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "values": [
+                {
+                  "name": "Ali Ahmet"
+                },
+                {
+                  "driver-type": "Kamyon Şöförü"
+                },
+                {
+                  "vehicle-id": "03 KV 730"
+                },
+                {
+                  "speed-violation": "2"
+                },
+                {
+                  "destrict-violation": "1"
+                },
+                {
+                  "wrong-unloading": "1"
+                },
+                {
+                  "engine-overload": "-"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
