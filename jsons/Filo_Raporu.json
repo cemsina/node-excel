@@ -1,0 +1,8 @@
+{
+  "name": "Filo Raporu",
+  "sheet_1": {
+    "sheet_name": "Kapak",
+    "header": "Ratio Mining",
+    "keys": ["rapor", "saha", "oluşturma_tarihi"]
+  }
+}

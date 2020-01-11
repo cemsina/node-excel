@@ -1,0 +1,100 @@
+{
+  "name": "İhlal Raporları",
+  "sheets": [
+    {
+      "name": "İhlaller Raporu",
+      "header": "Ratio Mining",
+      "subheaders": ["rapor", "saha", "oluşturma_tarihi"],
+      "values": ["Maden İhlaller Raporu", "Hekimhan", "12/20/2019"]
+    },
+    {
+      "name": "Günlük",
+      "date": "23/01/2018",
+      "tables": [
+        {
+          "name": "Vardiya 1(07:00-17:30)",
+          "headers": [
+            "Sürücüler",
+            "Sürücü Tipi",
+            "Kullandığı Araç",
+            "Hız İhlali",
+            "Bölge İhlali",
+            "Yanlış Dökme",
+            "Motor Zorlama Uyarısı"
+          ],
+          "items": [
+            {
+              "values": [
+                "Ali 1",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "values": [
+                "Ali 2",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "values": [
+                "Ali 2",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vardiya 2 (23:00-07:00)",
+          "headers": [
+            "Sürücüler",
+            "Sürücü Tipi",
+            "Kullandığı Araç",
+            "Hız İhlali",
+            "Bölge İhlali",
+            "Yanlış Dökme",
+            "Motor Zorlama Uyarısı"
+          ],
+          "items": [
+            {
+              "values": [
+                "Ali 3",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "0"
+              ]
+            },
+            {
+              "values": [
+                "Ali 4",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "0"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

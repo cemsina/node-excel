@@ -1,3 +1,4 @@
-const {FiloRapor} = require('./report');
+const { FiloRapor, IhlalRapor } = require("./report");
 
-FiloRapor();
+IhlalRapor();
+// FiloRapor();
