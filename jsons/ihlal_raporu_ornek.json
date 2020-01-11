@@ -1,0 +1,275 @@
+{
+    "date":"12/01/2020",
+    "saha": "Hekimhan",
+    "reports":[
+        {
+            "startDate":"12/13/2019",
+            "endDate":"12/13/2019",
+            "data":[
+                {
+                    "startTime":"07:00",
+                    "endTime":"17:30",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                },
+                {
+                    "startTime":"23:00",
+                    "endTime":"07:00",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "startDate":"12/13/2019",
+            "endDate":"12/13/2019",
+            "data":[
+                {
+                    "startTime":"07:00",
+                    "endTime":"17:30",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                },
+                {
+                    "startTime":"23:00",
+                    "endTime":"07:00",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                }
+            ]
+        },{
+            "startDate":"12/13/2019",
+            "endDate":"12/13/2019",
+            "data":[
+                {
+                    "startTime":"07:00",
+                    "endTime":"17:30",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                },
+                {
+                    "startTime":"23:00",
+                    "endTime":"07:00",
+                    "entries":[
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        },
+                        {
+                            "driver":"Ali Ahmet",
+                            "drivertype":"Kamyon Şöförü",
+                            "vehicle":"03 KV 730",
+                            "speedviolation":"2",
+                            "regionviolation":"1",
+                            "yanlisdokme":"1",
+                            "motorzorlama":"-"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
