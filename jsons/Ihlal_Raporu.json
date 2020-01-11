@@ -24,55 +24,25 @@
           ],
           "items": [
             {
-              "id": 0,
               "values": [
-                {
-                  "name": "Ali Ahmet"
-                },
-                {
-                  "driver-type": "Kamyon Şöförü"
-                },
-                {
-                  "vehicle-id": "03 KV 730"
-                },
-                {
-                  "speed-violation": "2"
-                },
-                {
-                  "destrict-violation": "1"
-                },
-                {
-                  "wrong-unloading": "1"
-                },
-                {
-                  "engine-overload": "-"
-                }
+                "Ali Ahmet",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "-"
               ]
             },
             {
-              "id": 1,
               "values": [
-                {
-                  "name": "Ali Ahmet"
-                },
-                {
-                  "driver-type": "Kamyon Şöförü"
-                },
-                {
-                  "vehicle-id": "03 KV 730"
-                },
-                {
-                  "speed-violation": "2"
-                },
-                {
-                  "destrict-violation": "1"
-                },
-                {
-                  "wrong-unloading": "1"
-                },
-                {
-                  "engine-overload": "-"
-                }
+                "Ali Ahmet",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "-"
               ]
             }
           ]
@@ -90,55 +60,14 @@
           ],
           "items": [
             {
-              "id": 2,
               "values": [
-                {
-                  "name": "Ali Ahmet"
-                },
-                {
-                  "driver-type": "Kamyon Şöförü"
-                },
-                {
-                  "vehicle-id": "03 KV 730"
-                },
-                {
-                  "speed-violation": "2"
-                },
-                {
-                  "destrict-violation": "1"
-                },
-                {
-                  "wrong-unloading": "1"
-                },
-                {
-                  "engine-overload": "-"
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "values": [
-                {
-                  "name": "Ali Ahmet"
-                },
-                {
-                  "driver-type": "Kamyon Şöförü"
-                },
-                {
-                  "vehicle-id": "03 KV 730"
-                },
-                {
-                  "speed-violation": "2"
-                },
-                {
-                  "destrict-violation": "1"
-                },
-                {
-                  "wrong-unloading": "1"
-                },
-                {
-                  "engine-overload": "-"
-                }
+                "Ali Ahmet",
+                "Kamyon Şöförü",
+                "03 KV 730",
+                "2",
+                "1",
+                "1",
+                "-"
               ]
             }
           ]
