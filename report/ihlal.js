@@ -28,159 +28,127 @@ var Ihlal_Raporu = require("./../jsons/Ihlal_Raporu.json");
 */
 
 let content = {
-  name: Ihlal_Raporu.name,
+  name: "Ihlal_Raporu",
   sheets: [
     {
-      name: Ihlal_Raporu.sheets[0].name,
+      name: "Ihlal Raporu",
       cells: {
-        "A1:B1": { value: Ihlal_Raporu.sheets[0].name }
+        "A1:B1": { value: "Ratio Mining", bold: true, horizontal: "center" }
       }
     },
     {
-      name: Ihlal_Raporu.sheets[1].name,
+      name: "Günlük",
       cells: {
-        F1: { value: "Tarih" },
-        G1: { value: Ihlal_Raporu.sheets[1].date },
-        "A3:G3": {
-          value: Ihlal_Raporu.sheets[1].tables[0].name,
-          bold: true,
-          vertical: "center",
-          fontSize: 10
-        }
+        F1: { value: "Tarih:" }
       }
     }
   ]
 };
 
-function getRow(number) {
-  switch (number) {
-    case value:
-      break;
-
-    default:
-      break;
-  }
+function writeCellBold(sheet, X, Y, value) {
+  const ascii = Y + 64;
+  yPrime = String.fromCharCode(ascii);
+  const cell = `${yPrime}${X}`;
+  content.sheets[sheet].cells[cell] = {
+    bold: true,
+    vertical: "center",
+    fontSize: 10,
+    value: value
+  };
+}
+function writeCellHeader(sheet, X, Y, Z, T, value) {
+  const ascii = Y + 64;
+  yPrime = String.fromCharCode(ascii);
+  const ascii_2 = T + 64;
+  tPrime = String.fromCharCode(ascii_2);
+  const cell = `${yPrime}${X}:${tPrime}${Z}`;
+  content.sheets[sheet].cells[cell] = {
+    bold: true,
+    vertical: "center",
+    fontSize: 10,
+    value: value,
+    horizontal: "center"
+  };
+}
+function writeCell(sheet, X, Y, value) {
+  const ascii = Y + 64;
+  yPrime = String.fromCharCode(ascii);
+  const cell = `${yPrime}${X}`;
+  content.sheets[sheet].cells[cell] = {
+    vertical: "center",
+    fontSize: 10,
+    value: value
+  };
 }
 
 function IhlalRapor() {
-  let table2Offset = 0;
-  let table1Length = 3;
+  // Ihlaller Raporu
+  writeCellBold(0, 2, 1, "Rapor:");
+  writeCellBold(0, 3, 1, "Saha:");
+  writeCellBold(0, 4, 1, "Oluşturma Tarihi:");
+  writeCell(0, 2, 2, "Maden Ihlaller Raporu");
+  writeCell(0, 3, 2, Ihlal_Raporu.saha);
+  writeCell(0, 4, 2, Ihlal_Raporu.date);
 
-  let Sum1 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let Sum2 = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  for (
-    let i = 0;
-    i < Object.keys(Ihlal_Raporu.sheets[0].subheaders).length;
-    i++
-  ) {
-    content.sheets[0].cells[`A${i + 2}`] = {
-      bold: true,
-      vertical: "center",
-      fontSize: 10,
-      value: Ihlal_Raporu.sheets[0].subheaders[i]
-    };
-    content.sheets[0].cells[`B${i + 2}`] = {
-      vertical: "center",
-      fontSize: 10,
-      value: Ihlal_Raporu.sheets[0].values[i]
-    };
-  }
-  table1Length++;
-  for (let i = 65; i < 72; i++) {
-    let cell = String.fromCharCode(i) + 4;
-    content.sheets[1].cells[cell] = {
-      bold: true,
-      vertical: "center",
-      fontSize: 10,
-      value: Ihlal_Raporu.sheets[1].tables[0].headers[i - 65]
-    };
-    for (
-      let j = 0;
-      j < Object.keys(Ihlal_Raporu.sheets[1].tables[0].items).length;
-      j++
-    ) {
-      cell = String.fromCharCode(i) + (j + 5);
-      content.sheets[1].cells[cell] = {
-        vertical: "center",
-        fontSize: 10,
-        value: Ihlal_Raporu.sheets[1].tables[0].items[j].values[i - 65]
-      };
-      table2Offset = j + 8;
-      if (i - 65 > 2) {
-        let number = Number(
-          Ihlal_Raporu.sheets[1].tables[0].items[j].values[i - 65]
-        );
-        Sum1[i - 65] += number;
-        cell = String.fromCharCode(i) + (j + 6);
-        content.sheets[1].cells[cell] = {
-          vertical: "center",
-          fontSize: 10,
-          value: Sum1[i - 65]
-        };
-      }
+  // Günlük
+  const data = Ihlal_Raporu.reports[0].data;
+  let currentRow = 3;
+  for (let d = 0; d < data.length; d++) {
+    const startTime = data[d].startTime;
+    const endTime = data[d].endTime;
+    writeCellHeader(
+      1,
+      currentRow,
+      1,
+      currentRow,
+      7,
+      `Vardiya ${d + 1}(${startTime} - ${endTime})`
+    );
+    currentRow++;
+    const headers = [
+      "Sürücüler",
+      "Sürücü Tipi",
+      "Kullandığı Araç",
+      "Hız İhlali",
+      "Bölge İhlali",
+      "Yanlış Dökme",
+      "Motor Zorlama Uyarısı"
+    ];
+    for (let i = 1; i <= 7; i++) {
+      writeCellBold(1, currentRow, i, headers[i - 1]);
     }
+    currentRow++;
+    const entries = data[d].entries;
+    let sumList = [0, 0, 0, 0, 0, 0];
+    for (let i = 0; i < entries.length; i++) {
+      let column = 1;
+      let object = entries[i];
+      for (var attributename in object) {
+        writeCell(1, currentRow, column, object[attributename]);
+        const value = Number(object[attributename]);
+        if (attributename === "speedviolation") {
+          if (object[attributename] !== "-") sumList[2] += value;
+        } else if (attributename === "regionviolation") {
+          if (object[attributename] !== "-") sumList[3] += value;
+        } else if (attributename === "yanlisdokme") {
+          if (object[attributename] !== "-") sumList[4] += value;
+        } else if (attributename === "motorzorlama") {
+          if (object[attributename] !== "-") sumList[5] += value;
+        }
+        column++;
+      }
+      currentRow++;
+    }
+    writeCellBold(1, currentRow, 1, "TOPLAM");
+    for (let i = 0; i < sumList.length; i++) {
+      if (sumList[i] === 0) {
+        writeCell(1, currentRow, i + 2, "-");
+      } else writeCell(1, currentRow, i + 2, sumList[i]);
+    }
+    currentRow += 2;
   }
-  table1Length++;
-  cell = "A" + (table2Offset - 2);
-  content.sheets[1].cells[cell] = {
-    bold: true,
-    vertical: "center",
-    fontSize: 10,
-    value: "Toplam :"
-  };
-  cell = `A${table2Offset}:G${table2Offset}`;
-  content.sheets[1].cells[cell] = {
-    bold: true,
-    vertical: "center",
-    fontSize: 10,
-    value: Ihlal_Raporu.sheets[1].tables[1].name
-  };
-  table1Length += 2;
-  console.log("TCL: table1Length", table1Length);
 
-  for (let i = 65; i < 72; i++) {
-    cell = String.fromCharCode(i) + (table2Offset + 1);
-    content.sheets[1].cells[cell] = {
-      bold: true,
-      vertical: "center",
-      fontSize: 10,
-      value: Ihlal_Raporu.sheets[1].tables[1].headers[i - 65]
-    };
-    for (
-      let j = 0;
-      j < Object.keys(Ihlal_Raporu.sheets[1].tables[1].items).length;
-      j++
-    ) {
-      cell = String.fromCharCode(i) + (table2Offset + 2 + j);
-      content.sheets[1].cells[cell] = {
-        vertical: "center",
-        fontSize: 10,
-        value: Ihlal_Raporu.sheets[1].tables[1].items[j].values[i - 65]
-      };
-      if (i - 65 > 2) {
-        let number = Number(
-          Ihlal_Raporu.sheets[1].tables[1].items[j].values[i - 65]
-        );
-        Sum2[i - 65] += number;
-        cell = String.fromCharCode(i) + (j + table2Offset + 3);
-        content.sheets[1].cells[cell] = {
-          vertical: "center",
-          fontSize: 10,
-          value: Sum2[i - 65]
-        };
-      }
-    }
-  }
-  cell = "A" + (table2Offset + 4);
-  console.log("TCL: cell", cell);
-  content.sheets[1].cells[cell] = {
-    bold: true,
-    vertical: "center",
-    fontSize: 10,
-    value: "Toplam :"
-  };
   createExcel(content);
-  console.log("TCL: content", content);
 }
 
 module.exports = IhlalRapor;
