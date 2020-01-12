@@ -39,7 +39,19 @@ let content = {
     {
       name: "Günlük",
       cells: {
-        F1: { value: "Tarih:" }
+        F1: { value: "" }
+      }
+    },
+    {
+      name: "Haftalık",
+      cells: {
+        F1: { value: "" }
+      }
+    },
+    {
+      name: "Aylık",
+      cells: {
+        F1: { value: "" }
       }
     }
   ]
@@ -91,61 +103,74 @@ function IhlalRapor() {
   writeCell(0, 4, 2, Ihlal_Raporu.date);
 
   // Günlük
-  const data = Ihlal_Raporu.reports[0].data;
-  let currentRow = 3;
-  for (let d = 0; d < data.length; d++) {
-    const startTime = data[d].startTime;
-    const endTime = data[d].endTime;
-    writeCellHeader(
-      1,
-      currentRow,
-      1,
-      currentRow,
-      7,
-      `Vardiya ${d + 1}(${startTime} - ${endTime})`
-    );
-    currentRow++;
-    const headers = [
-      "Sürücüler",
-      "Sürücü Tipi",
-      "Kullandığı Araç",
-      "Hız İhlali",
-      "Bölge İhlali",
-      "Yanlış Dökme",
-      "Motor Zorlama Uyarısı"
-    ];
-    for (let i = 1; i <= 7; i++) {
-      writeCellBold(1, currentRow, i, headers[i - 1]);
+  const reports = Ihlal_Raporu.reports;
+  for (let r = 0; r < reports.length; r++) {
+    if (reports[r].startDate === reports[r].endDate) {
+      writeCellBold(r + 1, 1, 6, "Tarih:");
+      writeCell(r + 1, 1, 7, reports[r].startDate);
+    } else {
+      writeCellBold(r + 1, 1, 1, "Başlangıç Tarihi");
+      writeCell(r + 1, 1, 2, reports[r].startDate);
+
+      writeCellBold(r + 1, 1, 6, "Bitiş Tarihi");
+      writeCell(r + 1, 1, 7, reports[r].endDate);
     }
-    currentRow++;
-    const entries = data[d].entries;
-    let sumList = [0, 0, 0, 0, 0, 0];
-    for (let i = 0; i < entries.length; i++) {
-      let column = 1;
-      let object = entries[i];
-      for (var attributename in object) {
-        writeCell(1, currentRow, column, object[attributename]);
-        const value = Number(object[attributename]);
-        if (attributename === "speedviolation") {
-          if (object[attributename] !== "-") sumList[2] += value;
-        } else if (attributename === "regionviolation") {
-          if (object[attributename] !== "-") sumList[3] += value;
-        } else if (attributename === "yanlisdokme") {
-          if (object[attributename] !== "-") sumList[4] += value;
-        } else if (attributename === "motorzorlama") {
-          if (object[attributename] !== "-") sumList[5] += value;
-        }
-        column++;
+    const data = reports[r].data;
+    let currentRow = 3;
+    for (let d = 0; d < data.length; d++) {
+      const startTime = data[d].startTime;
+      const endTime = data[d].endTime;
+      writeCellHeader(
+        r + 1,
+        currentRow,
+        1,
+        currentRow,
+        7,
+        `Vardiya ${d + 1}(${startTime} - ${endTime})`
+      );
+      currentRow++;
+      const headers = [
+        "Sürücüler",
+        "Sürücü Tipi",
+        "Kullandığı Araç",
+        "Hız İhlali",
+        "Bölge İhlali",
+        "Yanlış Dökme",
+        "Motor Zorlama Uyarısı"
+      ];
+      for (let i = 1; i <= 7; i++) {
+        writeCellBold(r + 1, currentRow, i, headers[i - 1]);
       }
       currentRow++;
+      const entries = data[d].entries;
+      let sumList = [0, 0, 0, 0, 0, 0];
+      for (let i = 0; i < entries.length; i++) {
+        let column = 1;
+        let object = entries[i];
+        for (var attributename in object) {
+          writeCell(r + 1, currentRow, column, object[attributename]);
+          const value = Number(object[attributename]);
+          if (attributename === "speedviolation") {
+            if (object[attributename] !== "-") sumList[2] += value;
+          } else if (attributename === "regionviolation") {
+            if (object[attributename] !== "-") sumList[3] += value;
+          } else if (attributename === "yanlisdokme") {
+            if (object[attributename] !== "-") sumList[4] += value;
+          } else if (attributename === "motorzorlama") {
+            if (object[attributename] !== "-") sumList[5] += value;
+          }
+          column++;
+        }
+        currentRow++;
+      }
+      writeCellBold(r + 1, currentRow, 1, "TOPLAM");
+      for (let i = 0; i < sumList.length; i++) {
+        if (sumList[i] === 0) {
+          writeCell(r + 1, currentRow, i + 2, "-");
+        } else writeCell(r + 1, currentRow, i + 2, sumList[i]);
+      }
+      currentRow += 2;
     }
-    writeCellBold(1, currentRow, 1, "TOPLAM");
-    for (let i = 0; i < sumList.length; i++) {
-      if (sumList[i] === 0) {
-        writeCell(1, currentRow, i + 2, "-");
-      } else writeCell(1, currentRow, i + 2, sumList[i]);
-    }
-    currentRow += 2;
   }
 
   createExcel(content);
