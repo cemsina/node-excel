@@ -1,3 +1,4 @@
 const {FiloRapor} = require('./report');
 
-FiloRapor();
+
+new FiloRapor().save("test");

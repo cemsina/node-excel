@@ -14,6 +14,24 @@ function createExcel(json){
     }
 }
 
+function toCell(row,col){
+    const TABLE = "AZ";
+    const start = TABLE.charCodeAt(0);
+    const end = TABLE.charCodeAt(1);
+    const diff = end - start;
+
+    var temp = col;
+    var columnStr = "";
+    while(temp > 0){
+        var cursor = temp % diff;
+        columnStr += String.fromCharCode(start + cursor -1);
+        temp -= cursor;
+    }
+
+    return columnStr + row;
+}
+
 module.exports = {
-    createExcel: createExcel
+    createExcel: createExcel,
+    toCell: toCell
 };
